@@ -44,11 +44,11 @@ class LoginLayout extends Component {
                     <p className="white">
                       Please use your credentials to login.
                       <br />
-                      If you are not a member, please{" "}
+                      {/*If you are not a member, please{" "}
                       <NavLink to={`/register`} className="white">
                         register
                       </NavLink>
-                      .
+    .*/}
                     </p>
                   </div>
                   <div className="form-side">

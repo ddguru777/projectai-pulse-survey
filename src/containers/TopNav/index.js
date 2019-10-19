@@ -243,7 +243,7 @@ class TopNav extends Component {
           </span>
         </div>
 
- <div className="d-inline-block">
+        {/*<div className="d-inline-block">
           <UncontrolledDropdown className="ml-2">
             <DropdownToggle
               caret
@@ -263,19 +263,19 @@ class TopNav extends Component {
                 )
               })
             }
-            </DropdownMenu>
+          </DropdownMenu>
           </UncontrolledDropdown>
-        </div>
+        </div>*/}
 
         
-        <a className="navbar-logo" href="/">
+        {/*<a className="navbar-logo" href="/">
           <span className="logo d-none d-xs-block" />
           <span className="logo-mobile d-block d-xs-none" />
-        </a>
+      </a>*/}
 
         <div className="ml-auto">
           <div className="header-icons d-inline-block align-middle">
-            <div className="position-relative d-none d-sm-inline-block">
+            {/*<div className="position-relative d-none d-sm-inline-block">
               <UncontrolledDropdown className="dropdown-menu-right">
                 <DropdownToggle className="header-icon" color="empty">
                   <i className="simple-icon-grid" />
@@ -311,9 +311,9 @@ class TopNav extends Component {
                   </NavLink>
                 </DropdownMenu>
               </UncontrolledDropdown>
-            </div>
+      </div>*/}
 
-            <div className="position-relative d-inline-block">
+            {/*<div className="position-relative d-inline-block">
               <UncontrolledDropdown className="dropdown-menu-right">
                 <DropdownToggle
                   className="header-icon notificationButton"
@@ -358,7 +358,7 @@ class TopNav extends Component {
                   </PerfectScrollbar>
                 </DropdownMenu>
               </UncontrolledDropdown>
-            </div>
+                  </div>*/}
 
             <button
               className="header-icon btn btn-empty d-none d-sm-inline-block"
@@ -376,17 +376,17 @@ class TopNav extends Component {
           <div className="user d-inline-block">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
-                <span className="name mr-1">Sarah Kortney</span>
+                <span className="name mr-1">Developer</span>
                 <span>
-                  <img alt="Profile" src="/assets/img/profile-pic-l.jpg" />
+                  <img alt="Profile" src="/assets/img/profile-pic-l-2.jpg" />
                 </span>
               </DropdownToggle>
               <DropdownMenu className="mt-3" right>
-                <DropdownItem>Account</DropdownItem>
+                {/*<DropdownItem>Account</DropdownItem>
                 <DropdownItem>Features</DropdownItem>
                 <DropdownItem>History</DropdownItem>
                 <DropdownItem>Support</DropdownItem>
-                <DropdownItem divider />
+                <DropdownItem divider />*/}
                 <DropdownItem onClick={() => this.handleLogout()}>
                   Sign out
                 </DropdownItem>

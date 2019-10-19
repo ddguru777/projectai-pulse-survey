@@ -167,7 +167,7 @@ class Sidebar extends Component {
         });
       }else if (this.state.selectedParentMenu == "") {
         this.setState({
-          selectedParentMenu: "gogo"
+          selectedParentMenu: "survey"
         });
       }
 
@@ -256,30 +256,19 @@ class Sidebar extends Component {
               <Nav vertical className="list-unstyled">
                 <NavItem
                   className={classnames({
-                    active: ((this.state.selectedParentMenu == "gogo" && this.state.viewingParentMenu=="" )|| this.state.viewingParentMenu=="gogo")
-                  })}
+                    active: ((this.state.selectedParentMenu == "survey" && this.state.viewingParentMenu == "") || this.state.viewingParentMenu == "survey")
+                  })} survey
                 >
                   <NavLink
-                    to="/app/gogo"
-                    onClick={e => this.openSubMenu(e, "gogo")}
-                  >
+                    to="/app/survey"
+                    onClick={() => this.changeViewingParentMenu('survey')}
+                    data-flag="survey">
                     <i className="iconsmind-Air-Balloon" />{" "}
-                    <IntlMessages id="menu.gogo" />
+                    <IntlMessages id="menu.survey" />
                   </NavLink>
+
                 </NavItem>
-                <NavItem
-                  className={classnames({
-                    active: ((this.state.selectedParentMenu == "second-menu" && this.state.viewingParentMenu=="" )|| this.state.viewingParentMenu=="second-menu")
-                  })}
-                >
-                  <NavLink
-                    to="/app/second-menu"
-                    onClick={e => this.openSubMenu(e, "second-menu")}
-                  >
-                    <i className="iconsmind-Chemical-3" />{" "}
-                    <IntlMessages id="menu.second-menu" />
-                  </NavLink>
-                </NavItem>
+
               </Nav>
             </PerfectScrollbar>
           </div>
@@ -290,33 +279,6 @@ class Sidebar extends Component {
             <PerfectScrollbar
               option={{ suppressScrollX: true, wheelPropagation: false }}
             >
-              <Nav
-                className={classnames({
-                  "d-block": ((this.state.selectedParentMenu == "gogo" && this.state.viewingParentMenu=="" )|| this.state.viewingParentMenu=="gogo")
-                })}
-                data-parent="gogo"
-              >
-                <NavItem>
-                  <NavLink to="/app/gogo/start">
-                    <i className="simple-icon-paper-plane" />{" "}
-                    <IntlMessages id="menu.start" />
-                  </NavLink>
-                </NavItem>
-              </Nav>
-
-              <Nav
-                className={classnames({
-                  "d-block": ((this.state.selectedParentMenu == "second-menu" && this.state.viewingParentMenu=="" )|| this.state.viewingParentMenu=="second-menu")
-                })}
-                data-parent="second-menu"
-              >
-                <NavItem>
-                  <NavLink to="/app/second-menu/second">
-                    <i className="simple-icon-paper-plane" />{" "}
-                    <IntlMessages id="menu.second" />
-                  </NavLink>
-                </NavItem>
-              </Nav>
             </PerfectScrollbar>
           </div>
         </div>
